@@ -60,6 +60,7 @@ body, html {
 
 .buttonWidth {
   width: 45%;
+  cursor: pointer;
 }
 
 .component_TagsArea {
@@ -76,13 +77,22 @@ body, html {
 }
 
 .tag {
-  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
   height: 20px;
   min-height: 20px;
+  padding: 0 8px;
   margin-top: 5px;
   text-align: center;
   border: 2px solid grey;
   border-radius: 3px;
+}
+
+.pic {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
 }
 
 .component_ReadOnlyMode {
