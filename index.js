@@ -1,4 +1,5 @@
 
+// adding tags
 let addButton = document.querySelector('.button');
 
 addButton.addEventListener('click', () => {
@@ -23,6 +24,19 @@ addButton.addEventListener('click', () => {
 
 });
 
+
+// tags removal
 document.addEventListener( "click" , ({target}) => (target = target.closest(".pic")) && target.parentElement.remove());
 
 
+// readonly mode
+let active = document.querySelector('.readOnlyMode');
+let textMode = document.querySelector('.inputValue');
+let tagMode = document.querySelector('.component_TagsArea');
+
+active.addEventListener('click', () => {
+  (!active.classList.contains('active')) ? active.classList.add('active') : active.classList.remove('active');
+  (!textMode.hasAttribute('readonly')) ? textMode.setAttribute('readonly', '') : textMode.removeAttribute('readonly');
+  (!addButton.hasAttribute('disabled')) ? addButton.setAttribute('disabled', '') : addButton.removeAttribute('disabled');
+  (!tagMode.classList.contains('inactiveTag')) ? tagMode.classList.add('inactiveTag') : tagMode.classList.remove('inactiveTag')
+})

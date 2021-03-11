@@ -60,7 +60,12 @@ body, html {
 
 .buttonWidth {
   width: 45%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   cursor: pointer;
+}
+
+.buttonWidth::placeholder {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .component_TagsArea {
@@ -95,9 +100,23 @@ body, html {
   cursor: pointer;
 }
 
-.component_ReadOnlyMode {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 25%;
+.readOnlyMode {
+  padding: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: rgb(233, 231, 231);
+  cursor: pointer;
+}
+
+.readOnlyMode:hover {
+  border: 1px solid rgb(59, 59, 59);
+}
+
+.active {
+  background-color: rgb(202, 200, 200);
+}
+
+.inactiveTag {
+  pointer-events: none;
 }
