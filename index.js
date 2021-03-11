@@ -1,6 +1,5 @@
 
 let addButton = document.querySelector('.button');
-let closeButton = document.querySelector('.pic');
 
 addButton.addEventListener('click', () => {
 
@@ -21,12 +20,9 @@ addButton.addEventListener('click', () => {
     tagsArea.prepend(tagContainer);
     document.querySelector('.inputValue').value = ''; 
   }
-  
+
 });
 
-// if (closeButton) {
-//   closeButton.addEventListener('click', (i) => {
-//     closeButton.style.display = 'none';
-//   })
-// }
+document.addEventListener( "click" , ({target}) => (target = target.closest(".pic")) && target.parentElement.remove());
+
 
